@@ -1,0 +1,11 @@
+class Solution(object):
+    def reverseWords(self, s):
+        splits = split(s)
+        reverse = []
+
+        for i in splits:
+            reverse.insert(0, i)
+        
+        revString = " ".join(reverse)
+
+        return revString
