@@ -1,6 +1,6 @@
 class Solution(object):
     def reverseWords(self, s):
-        splits = split(s)
+        splits = s.split(" ")
         reverse = []
 
         for i in splits:
