@@ -1,0 +1,18 @@
+class Solution(object):
+    def increasingTriplet(self, nums):
+        
+        length = len(nums)
+        smallest = int
+        small = int
+
+        for i in range(length):
+            if nums[i] <= smallest:
+                smallest = nums[i]
+            
+            elif nums[i] <= small:
+                small = nums[i]
+        
+            else: 
+                return True
+            
+        return False
