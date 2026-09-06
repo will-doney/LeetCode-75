@@ -1,0 +1,19 @@
+class Solution(object):
+    def findMaxAverage(self, nums, k):
+        pointL = 0
+        pointR = k
+
+        current_average = sum(nums[:k])
+        max_average = current_average 
+
+        while pointR < len(nums):
+            current_average -= nums[pointL]
+            current_average += nums[pointR]
+            if current_average > max_average:
+                max_average = current_average
+            pointL += 1
+            pointR += 1 
+        
+        (max_average) = float(max_average)
+
+        return max_average / k
