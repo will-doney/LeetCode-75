@@ -1,0 +1,12 @@
+class Solution(object):
+    def pivotIndex(self, nums):
+        left_total = 0
+        nums_total = sum(nums)
+        for pivot in range(len(nums)):
+            nums_total -= nums[pivot]
+            
+            if left_total == nums_total:
+                return pivot
+
+            left_total += nums[pivot]
+        return -1
